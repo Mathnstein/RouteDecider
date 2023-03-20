@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "routedecider"
+  },
+  "targets": {
+    "routedecider": {
+      "hosting": {
+        "routeDecider": [
+          "routedecider"
+        ]
+      }
+    }
   }
 }
