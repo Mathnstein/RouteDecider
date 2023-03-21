@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@angular/service-worker": "^15.2.0",
+    "@ngrx/effects": "^15.4.0",
+    "@ngrx/store": "^15.4.0",
     "firebase": "^9.18.0",
     "firebaseui": "^6.0.2",
     "firebaseui-angular": "^6.1.3",

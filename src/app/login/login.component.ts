@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { AuthUIService } from './auth-ui.service';
+import { Store } from '@ngrx/store';
+import { logOut } from '../../state/auth/auth.actions';
+import { selectAuthUser } from '../../state/auth/auth.selectors';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(
-    private authService: AuthUIService
-  ) {  }
+  public user$ = this.store.select(() => selectAuthUser);
+  constructor(private store: Store) {}
 
   public async logOut(): Promise<void> {
-    await this.authService.logOut();
+    this.store.dispatch(logOut());
   }
 }
